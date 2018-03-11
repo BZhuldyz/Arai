@@ -15,9 +15,9 @@ from django.urls import reverse  # Used to generate URLs by reversing the URL pa
 
 class Student(models.Model):
     imya = models.CharField(max_length=200)
-    login = models.CharField('ISBN', max_length=13,
+    login = models.CharField(('ISBN', max_length=13,
                             help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>')
-    kafedra = models.ManyToManyField(kafedra, help_text="  ")
+    kafedra = models.ManyToManyField(kafedra, help_text="  "))
 
 
     def __str__(self):
